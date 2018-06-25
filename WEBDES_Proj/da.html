@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+	<html>
+	<head>
+		<title>Checkout</title>
+	</head>
+	<body>
+ 		
+		<form action=checkout_thankyou.html method="GET">
+			<input type="text" name="Addr_Street" placeholder="Street address" required>
+			<input type="text" name="Addr_City" placeholder="City" required>
+			<input type="text" name="Addr_State" placeholder="State/Country" required>
+			<input type="number" name="Addr_Zip" placeholder="ZIP Code" required>
+			<br>
+			<input type="Submit" name="Addr_Submit" value="Submit" onclick="confirm()" >
+
+
+		</form>
+<script type="text/javascript">
+	function confirm(){
+		var c = confirm("Please confirm that all information are correct.");
+		if(c==true){
+
+		}
+	}
+</script>
+		
+
+
+	</body>
+	</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+	<html>
+	<head>
+		<title>Thank you</title>
+	</head>
+	<body>
+ 		<script type="text/javascript">
+ 			function getUrlVars() {
+				var vars = {};
+				var parts = window.location.href.replace(/[?&]+([^=&]+)=([^&]*)/gi, function(m,key,value) {
+				vars[key] = value;
+				});
+				return vars;
+				}
+
+				var addr_street = getUrlVars()["Addr_Street"];
+				for(i = 0;i<10;i++){
+					addr_street = addr_street.replace("+"," ");
+				}
+				addr_street = addr_street.replace("%23","#");
+				addr_street = addr_street.replace("%2C",",");
+				var addr_city = getUrlVars()["Addr_City"].replace("+"," ");;
+				var addr_state = getUrlVars()["Addr_State"].replace("+"," ");;
+				var addr_zip = getUrlVars()["Addr_Zip"].replace("+"," ");;
+
+				document.write(addr_street+", "+addr_city+", "+addr_state+", "+addr_zip);
+ 		</script>
+ 		
+
+	</body>
+	</html>
